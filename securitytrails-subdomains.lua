@@ -38,7 +38,7 @@ function run(arg)
 
     for i=1,#subdomains do
       db_add('subdomain', {
-        value = subdomains[i],
+        value = subdomains[i] .. '.' .. arg['value'],
         domain_id = arg['id'],
         resolvable = nil,
       })
